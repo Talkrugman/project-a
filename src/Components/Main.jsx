@@ -1,6 +1,11 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase/app';
 
+const email = "envkt@example.com";
+const password = "abc12345";
+
+const createUserWithEmailAndPasswordPromise = createUserWithEmailAndPassword(auth, email, password);
+
 function test() {
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
