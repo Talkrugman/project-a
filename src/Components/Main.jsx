@@ -3,16 +3,19 @@ import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from '../firebase/app';
 
 function testEmailAndPassword() {
+    const email = "nnheo@example.com";
+    const password = "password";
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Signed in 
+            // Signed in
             const user = userCredential.user;
-            // ...
+            console.log(user);
         })
         .catch((error) => {
+            // Handle Errors here.
             const errorCode = error.code;
             const errorMessage = error.message;
-            // ..
+            //...
         });
 }
 
