@@ -36,7 +36,7 @@ function Main() {
             register user
         </button>
         <button onClick={testGoogleProvider}>
-            register
+            register google
         </button>
     </main>
 }
